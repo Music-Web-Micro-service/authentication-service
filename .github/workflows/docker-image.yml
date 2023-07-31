@@ -51,6 +51,9 @@ jobs:
               }
             ]
       -
+        name: test
+        run: cat /home/runner/.m2/settings.xml
+      -
         name: maven permisson
         run: chmod +x mvnw
       -
