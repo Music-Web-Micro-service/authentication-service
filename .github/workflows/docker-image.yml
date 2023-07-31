@@ -50,5 +50,5 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            GITHUB_ACTOR: ${{env.GITHUB_ACTOR}}
-            GITHUB_TOKEN: ${{env.GITHUB_TOKEN}}
+            "GITHUB_ACTOR=${{env.GITHUB_ACTOR}}"
+            "GITHUB_TOKEN=${{env.GITHUB_TOKEN}}"
