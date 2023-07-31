@@ -1,8 +1,9 @@
 FROM openjdk:17
 WORKDIR /app
 COPY . .
-
-#permission
+RUN mkdir -p /root/.m2 \
+    && mkdir /root/.m2/repository
+COPY ./.mvn/settings.xml /root/.m2
 RUN chmod +x mvnw
 RUN ./mvnw clean package
 
