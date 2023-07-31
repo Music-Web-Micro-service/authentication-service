@@ -1,0 +1,30 @@
+privateKey:
+privateLocation: ${classpath:jwt.rsa.pem}
+
+publicKey:
+publicLocation: jwtPublic.rsa.pem
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth_service
+    username: root
+    password: 712768
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+  application:
+    name: authenticationservice
+
+server:
+  port: 8084
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8061/eureka
