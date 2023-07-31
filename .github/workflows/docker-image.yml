@@ -24,6 +24,62 @@ jobs:
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       -
+        name: generate settings.xml for maven builds
+        uses: whelk-io/maven-settings-xml-action@v21
+        with:
+          repositories: >
+            [
+              {
+                "id": "github",
+                "name": "github",
+                "url": "https://maven.pkg.github.com/Music-Web-Micro-service/*",
+                "releases": {
+                  "enabled": "true",
+                  "updatePolicy": "always",
+                  "checksumPolicy": "fail"
+                },
+                "snapshots": {
+                  "enabled": "false",
+                  "updatePolicy": "always",
+                  "checksumPolicy": "fail"
+                }
+              },
+              {
+                "id": "central",
+                "name": "central",
+                "url": "https://repo1.maven.org/maven2",
+                "releases": {
+                  "enabled": "true",
+                  "updatePolicy": "always",
+                  "checksumPolicy": "fail"
+                },
+                "snapshots": {
+                  "enabled": "false",
+                  "updatePolicy": "always",
+                  "checksumPolicy": "fail"
+                }
+              }
+            ]
+          servers: >
+            [
+              {
+                "id": "github",
+                "username": "${GITHUB_ACTOR}",
+                "password": "${GITHUB_TOKEN}",
+                "configuration": {
+                  "httpConfiguration": {
+                    "all": {
+                      "usePreemptive": "true"
+                    }
+                  }
+                }
+              }
+            ]
+          output_file: ~/.m2/settings.xml
+      -
+        name: maven build up
+        run: ./mvnw package
+      -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       -
@@ -49,6 +105,3 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-args: |
-            "GITHUB_ACTOR=${{env.GITHUB_ACTOR}}"
-            "GITHUB_TOKEN=${{env.GITHUB_TOKEN}}"
