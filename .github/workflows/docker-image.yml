@@ -52,7 +52,7 @@ jobs:
         run: chmod +x mvnw
       -
         name: maven build up
-        run: ./mvnw package
+        run: ./mvnw clean package
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
