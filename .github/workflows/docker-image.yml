@@ -31,23 +31,11 @@ jobs:
             [
               {
                 "id": "github",
-                "name": "github",
                 "url": "https://maven.pkg.github.com/Music-Web-Micro-service/"
               },
               {
                 "id": "central",
-                "name": "central",
-                "url": "https://repo1.maven.org/maven2",
-                "releases": {
-                  "enabled": "true",
-                  "updatePolicy": "always",
-                  "checksumPolicy": "fail"
-                },
-                "snapshots": {
-                  "enabled": "false",
-                  "updatePolicy": "always",
-                  "checksumPolicy": "fail"
-                }
+                "url": "https://repo1.maven.org/maven2"
               }
             ]
           servers: >
