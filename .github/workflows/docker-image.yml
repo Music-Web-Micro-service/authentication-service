@@ -43,7 +43,7 @@ jobs:
               {
                 "id": "github",
                 "username": "${GITHUB_ACTOR}",
-                "password": "${GITHUB_TOKEN}"
+                "password": "${secrets.TOKEN}"
               }
             ]
       -
