@@ -21,9 +21,6 @@ jobs:
         name: Checkout
         uses: actions/checkout@v3
       -
-        name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
-      -
         name: generate settings.xml for maven builds
         uses: whelk-io/maven-settings-xml-action@v21
         with:
