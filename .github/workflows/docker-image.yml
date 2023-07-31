@@ -77,6 +77,9 @@ jobs:
             ]
 #           output_file: ~/.m2/settings.xml
       -
+        name: maven permisson
+        run: chmod +x mvnw
+      -
         name: maven build up
         run: ./mvnw package
       -
