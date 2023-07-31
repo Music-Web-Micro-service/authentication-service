@@ -54,15 +54,8 @@ jobs:
             [
               {
                 "id": "github",
-                "username": "${env.GITHUB_ACTOR}",
-                "password": "${env.GITHUB_TOKEN}",
-                "configuration": {
-                  "httpConfiguration": {
-                    "all": {
-                      "usePreemptive": "true"
-                    }
-                  }
-                }
+                "username": "${GITHUB_ACTOR}",
+                "password": "${GITHUB_TOKEN}",
               }
             ]
       -
