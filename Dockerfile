@@ -9,7 +9,7 @@ RUN chmod +x mvnw
 ENV GITHUB_ACTOR=${GITHUB_ACTOR}
 ENV GITHUB_TOKEN=${GITHUB_TOKEN}
 
-RUN cat /root/.m2/settings.xml
+RUN echo $GITHUB_ACTOR and $GITHUB_TOKEN
 #val
 RUN ./mvnw clean package
 
