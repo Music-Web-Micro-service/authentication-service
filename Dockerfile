@@ -11,7 +11,7 @@ ENV GITHUB_TOKEN=${GITHUB_TOKEN}
 
 RUN cat /root/.m2/settings.xml
 #val
-RUN ./mvnw clean package -f /root/.m2/settings.xml
+RUN ./mvnw clean package
 
 # Expose the port that your Eureka server listens on
 EXPOSE 8084
