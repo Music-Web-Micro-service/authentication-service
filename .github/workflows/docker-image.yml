@@ -30,20 +30,21 @@ jobs:
           repositories: >
             [
               {
-                "id": "github",
-                "url": "https://maven.pkg.github.com/Music-Web-Micro-service/"
-              },
-              {
                 "id": "central",
                 "url": "https://repo1.maven.org/maven2"
+              },
+              {
+                "id": "github",
+                "url": "https://maven.pkg.github.com/Music-Web-Micro-service/"
               }
+
             ]
           servers: >
             [
               {
                 "id": "github",
                 "username": "${GITHUB_ACTOR}",
-                "password": "${secrets.TOKEN}"
+                "password": "${GITHUB_TOKEN}"
               }
             ]
       -
