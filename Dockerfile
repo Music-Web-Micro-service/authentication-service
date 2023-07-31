@@ -3,9 +3,17 @@ WORKDIR /app
 COPY . .
 RUN mkdir -p /root/.m2 \
     && mkdir /root/.m2/repository
-COPY ./.mvn/settings.xml /root/.m2
+COPY ./.mvn/settings.xml /root/.m2/settings.xml
 RUN chmod +x mvnw
-RUN ./mvnw clean package
+
+ENV GITHUB_ACTOR=${GITHUB_ACTOR}
+ENV GITHUB_TOKEN=${GITHUB_TOKEN}
+
+RUN export GITHUB_ACTOR = $GITHUB_ACTOR
+RUN export GITHUB_TOKEN = $GITHUB_TOKEN
+
+#val
+RUN ./mvnw clean package -f /root/.m2/settings.xml
 
 # Expose the port that your Eureka server listens on
 EXPOSE 8084
