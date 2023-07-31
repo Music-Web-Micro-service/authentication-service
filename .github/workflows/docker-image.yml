@@ -32,7 +32,7 @@ jobs:
               {
                 "id": "github",
                 "name": "github",
-                "url": "https://maven.pkg.github.com/Music-Web-Micro-service/*"
+                "url": "https://maven.pkg.github.com/Music-Web-Micro-service/"
               },
               {
                 "id": "central",
