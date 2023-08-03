@@ -37,7 +37,8 @@ jobs:
                 "id": "github",
                 "url": "https://maven.pkg.github.com/Music-Web-Micro-service/*",
                 "snapshots": {
-                  "enabled": "true"
+                  "enabled": "true",
+                  "updatePolicy": "true"
                 }
               }
 
