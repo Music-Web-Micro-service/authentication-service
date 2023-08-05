@@ -52,7 +52,7 @@ jobs:
             ]
       -
         name: maven permisson
-        run: chmod +x mvnw
+        run: chmod +rwx mvnw
       -
         name: maven build up
         run: ./mvnw install package
