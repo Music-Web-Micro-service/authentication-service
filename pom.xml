@@ -92,7 +92,7 @@
         </dependency>
         <dependency>
             <groupId>com.freemusic</groupId>
-            <artifactId>feign-service</artifactId>
+            <artifactId>music-web-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
