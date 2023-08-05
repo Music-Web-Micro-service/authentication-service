@@ -93,12 +93,12 @@
         <dependency>
             <groupId>com.freemusic</groupId>
             <artifactId>music-web-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.1-RELEASE</version>
         </dependency>
         <dependency>
             <groupId>com.freemusic</groupId>
             <artifactId>music-web-parent</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.1-RELEASE</version>
         </dependency>
     </dependencies>
     <dependencyManagement>
