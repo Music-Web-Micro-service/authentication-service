@@ -25,7 +25,7 @@ jobs:
         uses: docker/setup-qemu-action@v2
       - uses: actions/setup-java@v3
         with:
-          distribution: 'zulu' # See 'Supported distributions' for available options
+          distribution: 'zulu'
           java-version: '17'
       -
         name: generate settings.xml for maven builds
@@ -39,7 +39,7 @@ jobs:
               },
               {
                 "id": "github",
-                "url": "https://maven.pkg.github.com/Sma1lboy/DemoA",
+                "url": "https://maven.pkg.github.com/Music-Web-Micro-service/*",
                 "snapshots": {
                   "enabled": "true",
                   "updatePolicy": "true"
