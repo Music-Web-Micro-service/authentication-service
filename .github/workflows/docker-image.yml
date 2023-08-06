@@ -30,6 +30,10 @@ jobs:
           repositories: >
             [
               {
+                "id": "central",
+                "url": "https://repo1.maven.org/maven2"
+              },
+              {
                 "id": "github",
                 "url": "https://maven.pkg.github.com/Music-Web-Micro-service/music-web-common",
                 "snapshots": {
@@ -40,10 +44,6 @@ jobs:
                    "enabled": "true",
                    "updatePolicy": "true"
                  }
-              },
-              {
-                "id": "central",
-                "url": "https://repo1.maven.org/maven2"
               }
             ]
           servers: >

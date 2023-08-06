@@ -127,13 +127,6 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-        <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/Music-Web-Micro-service/*</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
     </repositories>
 
 </project>
