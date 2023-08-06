@@ -42,7 +42,7 @@ jobs:
                  }
               },
               {
-                "id": "github2",
+                "id": "github",
                 "url": "https://maven.pkg.github.com/Music-Web-Micro-service/music-web-parent",
                 "snapshots": {
                   "enabled": "true",
