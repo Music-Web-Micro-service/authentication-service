@@ -101,6 +101,10 @@
             <artifactId>music-web-parent</artifactId>
             <version>0.0.2-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-openfeign-core</artifactId>
+        </dependency>
 
     </dependencies>
     <dependencyManagement>

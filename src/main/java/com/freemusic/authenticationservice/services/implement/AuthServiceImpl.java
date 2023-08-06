@@ -8,7 +8,7 @@ import com.freemusic.authenticationservice.repositories.AuthUserRepository;
 import com.freemusic.authenticationservice.repositories.RoleRepository;
 import com.freemusic.authenticationservice.repositories.UserRoleRepository;
 import com.freemusic.authenticationservice.services.AuthService;
-import com.freemusic.feignservice.clients.UserClients;
+import com.freemusic.musicwebcommon.clients.UserClients;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -22,7 +22,6 @@ import java.util.*;
 @Service
 public class AuthServiceImpl implements AuthService {
 
-    @Autowired
     private UserClients userClients;
 
     @Autowired

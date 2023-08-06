@@ -1,5 +1,5 @@
 package com.freemusic.authenticationservice;
-import com.freemusic.feignservice.clients.UserClients;
+import com.freemusic.musicwebcommon.clients.UserClients;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
