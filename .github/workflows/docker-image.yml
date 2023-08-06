@@ -35,7 +35,23 @@ jobs:
                 "snapshots": {
                   "enabled": "true",
                   "updatePolicy": "true"
-                }
+                },
+                "release": {
+                   "enabled": "true",
+                   "updatePolicy": "true"
+                 }
+              },
+              {
+                "id": "github2",
+                "url": "https://maven.pkg.github.com/Music-Web-Micro-service/music-web-parent",
+                "snapshots": {
+                  "enabled": "true",
+                  "updatePolicy": "true"
+                },
+                "release": {
+                   "enabled": "true",
+                   "updatePolicy": "true"
+                 }
               },
               {
                 "id": "central",
