@@ -24,13 +24,18 @@ public class AuthUser {
     @OneToMany(mappedBy = "authUser", fetch = FetchType.EAGER)
     private List<UserRole> userRoleList;
 
-    @Unique
+    @Column(unique = true)
     private String email;
 
-    @Unique
+    @Column(unique = true)
     private String phoneNumber;
 
     private String password;
+
+    // OAuth2 fields
+    private String oauth2Id;
+
+    private String provider;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date created_at;
